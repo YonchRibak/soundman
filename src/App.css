@@ -426,3 +426,29 @@ label .check-icon:after {
     width: 85vw;
   }
 }
+@media screen and (min-width: 1101px) {
+  .cards-container {
+    direction: ltr;
+  }
+  .card-container:not(:last-child) {
+    margin-left: -8rem;
+  }
+  .card-container {
+    box-shadow: 4px 4px 12px 2px rgba(0, 0, 0);
+    z-index: 2;
+    transition: 0.2s;
+  }
+  .card-container:hover {
+    transform: translateY(-1rem);
+  }
+  .card-container:hover ~ .card-container {
+    transform: translateX(8rem);
+  }
+
+  .cards-container .card-container:first-child {
+    margin-right: 0;
+  }
+  .cards-container .card-container:last-child {
+    margin-left: -8rem;
+  }
+}
